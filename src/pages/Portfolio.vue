@@ -7,13 +7,8 @@
         <template #activator="{ props }">
           <v-app-bar-nav-icon variant="text" v-bind="props" />
         </template><v-list>
-          <v-list-item
-            v-for="(item, i) in items"
-            :key="i"
-            :value="i"
-          >
-            <v-list-item-title>{{ item.title }} </v-list-item-title>
-          </v-list-item>
+          <v-list-item to="/">Home</v-list-item>
+          <v-list-item to="/about">About</v-list-item>
         </v-list></v-menu></v-app-bar-nav-icon>
     <v-app-bar-title>Home</v-app-bar-title>
     <v-btn class="cursor-pointer" to="About">About</v-btn>
@@ -88,16 +83,7 @@
 </template>
 
 <script lang="ts" setup>
-  interface Faces {
-    title: string
-    About: any
-  }
-  const items = [
-    { title: 'Home', route: '/' },
-    { title: 'About', route: '/about' },
-    { title: 'Education' },
-    { title: 'Projects' },
-  ]
+
 </script>
 
 <style scoped>

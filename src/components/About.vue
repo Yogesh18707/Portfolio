@@ -7,14 +7,8 @@
         <template #activator="{ props }">
           <v-app-bar-nav-icon variant="text" v-bind="props" />
         </template><v-list>
-          <v-list-item
-            v-for="(item, i) in items"
-            :key="i"
-            to="/about"
-            :value="i"
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
+          <v-list-item to="/">Home</v-list-item>
+          <v-list-item to="/about">About</v-list-item>
         </v-list></v-menu></v-app-bar-nav-icon>
     <v-app-bar-title>About</v-app-bar-title>
     <v-btn
@@ -106,16 +100,7 @@
   </v-footer>
 </template>
 <script setup lang="ts">
-  interface List {
-    title: string
-    About: any
-  }
-  const items = [
-    { title: 'Home' },
-    { title: 'About' },
-    { title: 'Education' },
-    { title: 'Projects' },
-  ]
+
 </script>
 <style scoped>
 a{
