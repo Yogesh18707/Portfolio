@@ -68,7 +68,6 @@
   </v-container>
   <v-footer class="d-flex flex-column  align-start mt-16">
     <v-card-subtitle>&copy; 2025 Yogesh. All Right Reserved</v-card-subtitle>
-
     <v-card-title>
       Contact Options:
     </v-card-title>
