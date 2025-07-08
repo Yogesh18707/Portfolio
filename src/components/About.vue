@@ -50,17 +50,14 @@
         src="../assets/7578002.webp"
         width="100"
       />
-      <v-img
-        height="100"
-        src="../assets/3640297.webp"
-        width="100"
-      />
-      <v-img
-        height="100"
-        src="../assets/bhopal-tally-solutions-tally-institute-of-learning-training-png-favpng-3RVx6sT78vDWSXHJxdHSjnk0F_t.jpg"
-        width="100"
-      />
     </div>
+    <v-img
+      class="ml-8"
+      height="100"
+      src="../assets/3640297.webp"
+      width="100"
+    />
+
   </v-card-item>
   <v-card class="text-center">
     <v-card-title>

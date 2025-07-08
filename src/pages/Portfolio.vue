@@ -12,7 +12,7 @@
             :key="i"
             :value="i"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>{{ item.title }} </v-list-item-title>
           </v-list-item>
         </v-list></v-menu></v-app-bar-nav-icon>
     <v-app-bar-title>Home</v-app-bar-title>
@@ -36,7 +36,7 @@
   </v-app-bar>
   <v-card-item>
     <div class="d-flex justify-center w-100 h-100">
-      <img class="rounded-circle" height="200" src="../assets/WhatsApp Image 2025-07-08 at 11.14.35_01b5ff42.jpg" width="200">
+      <img class="rounded-circle" height="150" src="../assets/WhatsApp Image 2025-07-08 at 11.14.35_01b5ff42.jpg" width="150">
       <span><v-card class="text-center rounded-t bg-shades-white elevation-24" width="170">
         <v-card-title>
           Hi, I'm Yogesh
@@ -59,7 +59,6 @@
       <v-btn class="rounded-xl mt-5" color="white">CSS</v-btn>
       <v-btn class="rounded-xl mt-5" color="white">JAVA SCRIPT</v-btn>
       <v-btn class="rounded-xl mt-5" color="white">VUE</v-btn>
-      <v-btn class="rounded-xl mt-5" color="white"><v-hover style="background-color: white">VUETIFY</v-hover></v-btn>
     </div>
   </v-container>
   <v-container class="d-flex justify-center flex-column mt-16">
@@ -94,8 +93,8 @@
     About: any
   }
   const items = [
-    { title: 'Home' },
-    { title: 'About' },
+    { title: 'Home', route: '/' },
+    { title: 'About', route: '/about' },
     { title: 'Education' },
     { title: 'Projects' },
   ]
