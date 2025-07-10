@@ -98,15 +98,19 @@
       width="700"
     >
   </v-card>
-  <v-footer class="d-flex flex-column  justify-start mt-5 align-start mt-16">
-    <v-card-subtitle>&copy; 2025 Yogesh. All Right Reserved</v-card-subtitle>
-    <h2>Contact Options:</h2>
-    <v-card-item>
-      <v-card-title class="d-flex align-center ga-5"><img height="30" src="../assets/call.webp" width="30"><a :href="`tel:${8295839288}`">{{ 8295836288 }}</a></v-card-title>
-      <v-card-title class="d-flex align-center ga-5"><v-icon icon="mdi-email" /><a href="mailto:yogesh628882@gmail.com">yogesh628882@gmail.com</a></v-card-title>
-      <v-card-title class="d-flex align-center ga-5"><img height="30" src="../assets/1731430269_logo-instagram-png.png" width="30"><a href="https://www.instagram.com/its_sandybasduda">its_sandybasduda</a>
+  <v-footer class="d-flex flex-column justify-center  mt-16">
+    <v-card-title class="align-self-start">
+      <h3>Contact Options:</h3>
+    </v-card-title>
+    <v-card-item id="contact" class=" align-self-start">
+      <v-card-title> <img height="30" src="../assets/call.webp" width="30"><a class="align-center" :href="`tel:${8295839288}`">{{ 8295836288 }}</a></v-card-title>
+      <v-card-title><v-icon icon="mdi-email" /><a class="align-center" href="mailto:yogesh628882@gmail.com">yogesh628882@gmail.com</a></v-card-title>
+      <v-card-title><img height="30" src="../assets/1731430269_logo-instagram-png.png" width="30"><a class="align-center" href="https://www.instagram.com/its_sandybasduda">its_sandybasduda</a>
       </v-card-title>
     </v-card-item>
+    <div class="d-flex justify-center">
+      <v-card-subtitle>&copy; 2025 Yogesh. All Right Reserved</v-card-subtitle>
+    </div>
   </v-footer>
 </template>
 <script setup lang="ts">
