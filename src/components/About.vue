@@ -3,14 +3,25 @@
     <v-app-bar-nav-icon>
       <v-spacer />
 
-      <v-menu>
+      <v-menu
+        offset-y
+        open-on-hover
+        transition="scale-transition"
+      >
         <template #activator="{ props }">
           <v-app-bar-nav-icon variant="text" v-bind="props" />
         </template><v-list>
           <v-list-item to="/">Home</v-list-item>
           <v-list-item to="/about">About</v-list-item>
         </v-list></v-menu></v-app-bar-nav-icon>
+    <v-btn
+      icon
+      @click="goback()"
+    >
+      <v-icon icon="mdi-arrow-left" />
+    </v-btn>
     <v-app-bar-title>About</v-app-bar-title>
+
     <v-btn
       class="mr-5 cursor-pointer"
       color="teal-darken-2"
@@ -19,7 +30,7 @@
       size="large"
       target="_blank"
     />
-    <v-btn href="https://github.com/Yogesh18707" rounded="lg" size="small" variant="outlined"> Github</v-btn>
+    <v-btn href="https://github.com/Yogesh18707" rounded="lg" size="small" variant="outlined" class="github"> Github</v-btn>
   </v-app-bar>
   <v-card class="pa-4 text-center justify-center" color="white">
     <v-card-title>Skills</v-card-title>
@@ -38,20 +49,19 @@
         height="100"
         src="../assets/pngtree-coding-language-css-system-vector-isometric-sign-png-image_4687821.png"
         width="100"
-      />
+      /></div>
+    <div class="d-flex justify-space-evenly mt-5">
       <v-img
         height="100"
         src="../assets/7578002.webp"
         width="100"
       />
+      <v-img
+        height="100"
+        src="../assets/3640297.webp"
+        width="100"
+      />
     </div>
-    <v-img
-      class="ml-8"
-      height="100"
-      src="../assets/3640297.webp"
-      width="100"
-    />
-
   </v-card-item>
   <v-card class="text-center">
     <v-card-title>
@@ -69,15 +79,15 @@
     <v-list>
       <v-list-item>
         <h1> • ITI (COPA Trade)</h1>
-        <v-card-title>Completed Computer Operator and Programming Assistant <br>(COPA) trade from Industrial Training Institute (ITI).</v-card-title>
+        <v-card-title>Completed Computer Operator and<br> Programming Assistant (COPA) trade <br>from Industrial Training Institute (ITI).</v-card-title>
       </v-list-item>
       <v-list-item>
         <h1> • 12th Standard</h1>
-        <v-card-title>Passed 12th from Aastha Public School under HBSE <br>(Haryana Board of School Education) with 68.4% marks.</v-card-title>
+        <v-card-title>Passed 12th from Aastha Public School <br> under HBSE(Haryana Board of School<br> Education) with 68.4% marks.</v-card-title>
       </v-list-item>
       <v-list-item>
         <h1> • 10th Standard</h1>
-        <v-card-title>Passed 10th from Vivekanand Sr. Sec. School under CBSE <br>(Central Board of Secondary Education) with a 9.4 CGPA.</v-card-title>
+        <v-card-title>Passed 10th from Vivekanand Sr. Sec.<br>  School under CBSE (Central Board of <br> Secondary Education) with a 9.4 CGPA.</v-card-title>
       </v-list-item>
     </v-list>
   </v-card>
@@ -100,11 +110,16 @@
   </v-footer>
 </template>
 <script setup lang="ts">
-
+  function goback() {
+ window.history.back()  }
 </script>
 <style scoped>
 a{
   text-decoration: none;
+  color: white;
+}
+.github:hover{
+  background-color: darkred;
   color: white;
 }
 

@@ -1,9 +1,13 @@
-<template>
+<template v-slot:default="{isHovering,props}">
   <v-app-bar>
     <v-app-bar-nav-icon>
       <v-spacer />
 
-      <v-menu>
+      <v-menu
+        offset-y
+        open-on-hover
+        transition="scale-transition"
+      >
         <template #activator="{ props }">
           <v-app-bar-nav-icon variant="text" v-bind="props" />
         </template><v-list>
@@ -21,13 +25,13 @@
       target="_blank"
     />
     <v-btn
-      color="primary"
+      class="github"
       href="https://github.com/Yogesh18707"
       rounded="lg"
       size="small"
       target="_blank"
       variant="outlined"
-    > Github</v-btn>
+    >Github </v-btn>
   </v-app-bar>
   <v-card-item>
     <div class="d-flex justify-center w-100 h-100">
@@ -41,12 +45,12 @@
     </div></v-card-item>
   <div class="d-flex justify-center">
     <v-container class="d-inline-flex justify-center bg-amber rounded-xl justify-space-around ">
-      <v-btn class="bg-transparent" color="white" href="#Skills">Skills</v-btn>
-      <v-btn class="bg-transparent" color="white" :to="{path: '/about', hash:'#Education' }">Education</v-btn>
-      <v-btn class="bg-transparent" color="white" href="#Projects">Projects</v-btn>
+      <v-btn class="hover" color="white" href="#Skills">Skills</v-btn>
+      <v-btn class="hover" color="white" :to="{path: '/about', hash:'#Education' }">Education</v-btn>
+      <v-btn class="hover" color="white" href="#Projects">Projects</v-btn>
     </v-container>
   </div>
-  <v-container class="d-flex justify-center flex-column">
+  <v-container class="d-flex justify-center flex-column mt-10">
     <h1 id="Skills">Skills</h1>
     <hr>
     <div class="d-flex justify-space-evenly">
@@ -58,25 +62,26 @@
   </v-container>
   <v-container class="d-flex justify-center flex-column mt-16">
     <h1 id="Projects">Projects</h1>
-    <v-card-subtitle>To view projects click on the GitHub button</v-card-subtitle>
     <hr>
     <div class="d-flex justify-space-evenly">
-      <v-btn class="rounded-xl mt-5" color="white">To-Do App</v-btn>
-      <v-btn class="rounded-xl mt-5" color="white">Portfolio</v-btn>
+      <v-btn class="rounded-xl mt-5" color="white" href="https://github.com/Yogesh18707/vuetify-To_doApp">To-Do App</v-btn>
+      <v-btn class="rounded-xl mt-5" color="white" href="https://github.com/Yogesh18707/Portfolio">Portfolio</v-btn>
 
     </div>
   </v-container>
-  <v-footer class="d-flex flex-column  align-start mt-16">
-    <v-card-subtitle>&copy; 2025 Yogesh. All Right Reserved</v-card-subtitle>
-    <v-card-title>
-      Contact Options:
+  <v-footer class="d-flex flex-column justify-center  mt-16">
+    <v-card-title class="align-self-start">
+      <h3>Contact Options:</h3>
     </v-card-title>
-    <v-card-item>
-      <v-card-title class="d-flex align-center ga-5"><img height="30" src="../assets/call.webp" width="30"><a :href="`tel:${8295839288}`">{{ 8295836288 }}</a></v-card-title>
-      <v-card-title class="d-flex align-center ga-5"><v-icon icon="mdi-email" /><a href="mailto:yogesh628882@gmail.com">yogesh628882@gmail.com</a></v-card-title>
-      <v-card-title class="d-flex align-center ga-5"><img height="30" src="../assets/1731430269_logo-instagram-png.png" width="30"><a href="https://www.instagram.com/its_sandybasduda">its_sandybasduda</a></v-card-title>
-
+    <v-card-item id="contact" class=" align-self-start">
+      <v-card-title> <img height="30" src="../assets/call.webp" width="30"><a class="align-center" :href="`tel:${8295839288}`">{{ 8295836288 }}</a></v-card-title>
+      <v-card-title><v-icon icon="mdi-email" /><a class="align-center" href="mailto:yogesh628882@gmail.com">yogesh628882@gmail.com</a></v-card-title>
+      <v-card-title><img height="30" src="../assets/1731430269_logo-instagram-png.png" width="30"><a class="align-center" href="https://www.instagram.com/its_sandybasduda">its_sandybasduda</a>
+      </v-card-title>
     </v-card-item>
+    <div class="d-flex justify-center">
+      <v-card-subtitle>&copy; 2025 Yogesh. All Right Reserved</v-card-subtitle>
+    </div>
   </v-footer>
 
 </template>
@@ -88,6 +93,24 @@
 <style scoped>
 a{
   text-decoration: none;
+  color: white;
+  font-size: small;
+}
+#contact{
+  line-height: min(3);
+}
+.hover:hover {
+  background-color: #2196f3 !important;
+  color: white;
+  transform: scale(1.1);
+}
+.mt-5:hover{
+  background-color: #2196f3 !important;
+  color: white;
+  transform: scale(1.1);
+}
+.github:hover{
+  background-color: darkred;
   color: white;
 }
 
